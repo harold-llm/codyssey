@@ -1,4 +1,4 @@
-> RSS 피드에서 AI 관련 뉴스를 자동 수집·분류하여 Notion 데이터베이스에 저장하는 자동화 워크플로우 ([n8n](http://116.126.134.212:55678/signin?redirect=%252F))
+> RSS 피드에서 AI 관련 뉴스를 자동 수집·분류하여 [Notion 데이터베이스](https://app.notion.com/p/hlnt/3910d527295080159d9cce9a214f44de?source=copy_link)에 저장하는 [n8n](http://116.126.134.212:55678/signin?redirect=%252F) 자동화 워크플로우
 
 ---
 
