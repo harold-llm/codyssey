@@ -3,7 +3,7 @@
 <aside>
 ⚖️
 
-**비교 대상:** Make Free와 로컬 셀프 호스팅 n8n Community Edition
+**비교 대상:** [Make](https://make.com)와 로컬 셀프 호스팅 n8n Community Edition
 
 **공통 워크플로우:** Google Form 문의 접수 → Google Sheets 새 행 감지 → 긴급도 조건 분기 → 분류 시트 저장 → 처리 로그 기록
 
