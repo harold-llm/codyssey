@@ -1,4 +1,4 @@
-> RSS 피드에서 AI 관련 뉴스를 자동 수집·분류하여 [Notion 데이터베이스](https://app.notion.com/p/hlnt/3910d527295080159d9cce9a214f44de?source=copy_link)에 저장하는 [n8n](http://116.126.134.212:55678/signin?redirect=%252F) 자동화 워크플로우
+> RSS 피드에서 AI 관련 뉴스를 자동 수집·분류하여 [Notion 데이터베이스](https://www.notion.so/3910d527295080159d9cce9a214f44de)에 저장하는 [n8n](http://116.126.134.212:55678/signin?redirect=%252F) 자동화 워크플로우
 
 ---
 
@@ -126,32 +126,36 @@ RSS 기사 → { title, link, pubDate }
 ## 4. 구현 화면
 
 ### 4-1. 전체 워크플로우
-![전체 워크플로우](./images/01_workflow_overview.png)
+
+![전체 워크플로우](B1-3/images/B-1.png)
 
 ### 4-2. Filter 노드 설정 (AI 키워드 필터링)
-![Filter 설정](./images/02_filter_config.png)
+
+![Filter 노드 설정](B1-3/images/B-2.png)
 
 ### 4-3. Switch 노드 설정 (주제별 분기 규칙)
-![Switch 설정](./images/03_switch_config.png)
+
+![Switch 노드 설정](B1-3/images/B-3.png)
 
 ### 4-4. Notion 노드 설정 (필드 매핑)
-![Notion 매핑](./images/04_notion_config.png)
+
+![Notion 노드 설정](B1-3/images/B-4.png)
 
 ---
 
 ## 5. 실행 결과
 
 ### 5-1. 워크플로우 활성화 (Published 상태)
-![Published 상태](./images/05_published.png)
 
-### 5-2. 자동 실행 기록 (Executions)
-![실행 기록](./images/06_executions.png)
+![워크플로우 활성화](B1-3/images/B-5.png)
 
-### 5-3. 실행 성공 상세 (노드별 데이터 흐름)
-![실행 상세](./images/07_execution_detail.png)
+### 5-2. 자동 실행 기록 및 실행 성공 상세
 
-### 5-4. Notion 데이터베이스 저장 결과
-![Notion 결과](./images/08_notion_result.png)
+![자동 실행 기록 및 실행 성공 상세](B1-3/images/B-6.png)
+
+### 5-3. Notion 데이터베이스 저장 결과
+
+![Notion 데이터베이스 저장 결과](B1-3/images/B-7.png)
 
 ---
 
