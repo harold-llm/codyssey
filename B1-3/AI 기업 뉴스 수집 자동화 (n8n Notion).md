@@ -55,34 +55,21 @@
 ​
 ```mermaid
 flowchart LR
-    subgraph Triggers["RSS 트리거 (매시간 실행)"]
-        T1[GeekNews]
-        T2[Hacker News]
-        T3[TechCrunch]
-        T4[The Verge]
-    end
-​
-    subgraph Source["출처 태깅"]
-        E3[Edit Fields3]
-        E4[Edit Fields4]
-        E5[Edit Fields5]
-        E6[Edit Fields6]
-    end
-​
-    T1 --> E3
-    T2 --> E4
-    T3 --> E5
-    T4 --> E6
-​
-    E3 & E4 & E5 & E6 --> F[Filter<br/>AI 관련 기사만 통과]
-​
-    F -->|Kept| S{Switch<br/>주제별 분기}
-​
-    S -->|분기 0| C1[Edit Fields<br/>카테고리: AI 하드웨어]
-    S -->|분기 1| C2[Edit Fields1<br/>카테고리: AI 소프트웨어]
-    S -->|Fallback| C3[Edit Fields2<br/>카테고리: 기타]
-​
-    C1 & C2 & C3 --> N[(Notion<br/>Create a database page)]
+  T1[GeekNews RSS Trigger] --> E3[Edit Fields3 source GeekNews]
+  T2[Hacker News RSS Trigger] --> E4[Edit Fields4 source Hacker News]
+  T3[TechCrunch RSS Trigger] --> E5[Edit Fields5 source TechCrunch]
+  T4[The Verge RSS Trigger] --> E6[Edit Fields6 source The Verge]
+  E3 --> F[Filter AI news only]
+  E4 --> F
+  E5 --> F
+  E6 --> F
+  F -->|Kept| S{Switch by topic}
+  S -->|Rule 0| C1[Edit Fields category AI Hardware]
+  S -->|Rule 1| C2[Edit Fields1 category AI Software]
+  S -->|Fallback| C3[Edit Fields2 category Others]
+  C1 --> N[Notion Create a database page]
+  C2 --> N
+  C3 --> N
 ```
 ​
 ### 3-2. 노드별 상세 설계
@@ -170,3 +157,4 @@ RSS 기사 → { title, link, pubDate }
 - [ ] AI 노드를 추가해 기사 본문 자동 요약 후 Notion에 저장
 - [ ] 중요 기사 발견 시 Slack/Discord 알림 연동
 - [ ] 중복 기사 제거 로직 추가
+​
